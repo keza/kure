@@ -1,46 +1,66 @@
-# Getting Started with Create React App
+# Küre Oyunu
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Web tarayıcısında bilgisayara karşı oynanabilen Küre oyunu.
 
-## Available Scripts
+## Proje Hakkında
 
-In the project directory, you can run:
+Bu proje, geleneksel "Küre" oyununun web tarayıcısı üzerinde oynanabilir bir versiyonudur. React ve TypeScript kullanılarak geliştirilmiştir. Oyun, kullanıcının bilgisayara karşı oynamasına olanak tanır ve çeşitli zorluk seviyeleri içerir.
 
-### `npm start`
+## Oyun Kuralları
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Oyuncular ve Taşlar:**
+   - Oyun iki oyuncu ile oynanır: Mor taşlı oyuncu ve Turuncu taşlı oyuncu
+   - Mor oyuncu her zaman oyuna ilk başlar
+   - Oyuncuların taşları, başlangıçta belirlenen sıralarda dizilir
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+2. **Taşların Hareket Kuralları:**
+   - Başlangıç sırasındaki taşlar yalnızca ileriye veya çapraza hareket edebilir
+   - Başlangıç sırasından ayrılan taşlar geri dönemez
+   - Başlangıç sırasından çıkmış taşlar ileri, geri, sağa, sola veya çapraza bir birim hareket edebilir
 
-### `npm test`
+3. **Oyun Alanındaki Sınırlamalar:**
+   - Taşlar, yatay, dikey veya çaprazda dört tane yan yana gelemez
+   - Eğer bir oyuncu dört taşı sıralarsa, hamlesi geçersiz sayılır ve taşını geri alarak kurallı bir hamle yapması gerekir
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Rakip Taşı Ele Geçirme:**
+   - Bir oyuncu, rakibinin taşını kendi taşlarının arasına sıkıştırırsa, sıkışan taşı oyun dışına çıkarır
+   - İki taş arasına giren oyuncunun taşı alınamaz
 
-### `npm run build`
+5. **Oyun Sonu ve Kazanma:**
+   - Bir oyuncu rakibinin dört taşını oyun dışına çıkarırsa seti kazanır
+   - Oyuncu üç defa kural ihlali yaparsa (3 uyarı cezası alırsa) seti kaybeder
+   - Oyun 3 set üzerinden oynanır ve 2 seti kazanan oyuncu oyunu kazanır
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Özellikler
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Güzel ve kullanıcı dostu arayüz
+- Geçerli hamlelerin görsel olarak gösterilmesi
+- Üç farklı zorluk seviyesi (Kolay, Orta, Zor)
+- Hamleyi geri alma özelliği
+- Oyun kurallarının açıklaması
+- Mobil cihazlarla uyumlu tasarım
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Kurulum ve Çalıştırma
 
-### `npm run eject`
+Projeyi yerel olarak çalıştırmak için:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+# Gerekli paketleri yükleyin
+npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Geliştirme sunucusunu başlatın
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Uygulama varsayılan olarak [http://localhost:3000](http://localhost:3000) adresinde çalışacaktır.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Teknolojiler
 
-## Learn More
+- React
+- TypeScript
+- CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Lisans
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Bu proje MIT lisansı altında lisanslanmıştır.
+# kure
